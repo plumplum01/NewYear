@@ -48,6 +48,7 @@
 font-family: 'NanumSquareRound';
 font-family: 'NanumSquareRoundBold';
 font-family: 'NanumSquareRoundExtraBold'; */
+
 .App {
   text-align: center;
 }
@@ -84,5 +85,116 @@ font-family: 'NanumSquareRoundExtraBold'; */
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* push main */
+h1 {
+  color: #5B5DFF;
+  font-family: "SF Pro Rounded";
+  font-size: 6.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+h3 {
+  color: #5B5DFF;
+  font-family: "SF Pro Rounded";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.pushMain {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(0deg, #FFF -32.88%, #6692FF 109.42%);
+}
+
+.btn-class-name {
+  --primary: 255, 90, 120;
+  --secondary: 150, 50, 60;
+  width: 120px;
+  height: 110px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  outline: 24px solid  rgba(90, 93, 255, 0.50);
+  border-radius: 100%;
+  position: relative;
+  transition: .3s;
+}
+
+.btn-class-name .back {
+  background: #2C2E89;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-class-name .front {
+  background:  linear-gradient(0deg, #5a5dff99 20%, #5A5DFF 50%);
+  box-shadow: 0px 48px 96px -19.2px #001C49;
+  border-radius: 100%;
+  position: absolute;
+  /* border: 4px solid #2C2E89; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  transform: translateY(-15%);
+  transition: .15s;
+  color: #5a5dff99;
+}
+
+.btn-class-name:active .front {
+  transform: translateY(0%);
+  box-shadow: 0 0;
+}
+
+
+.line-caption > span {
+  font-size: 24px;
+  color: #5B5DFF;
+  font-family: "SF Pro Rounded";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.line-caption {
+  background-color: white;
+}
+.flowing-text {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: flowText 30s linear infinite;
+  color: #5B5DFF;
+  font-family: "SF Pro Rounded";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@keyframes flowText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
