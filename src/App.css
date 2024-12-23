@@ -1,3 +1,4 @@
+
 /* font */
 /* SF rounded */
 /** Ultra Light */
@@ -44,6 +45,12 @@
 
 
 /* 나눔스퀘어라운드 */
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /* font-family: 'NanumSquareRoundLight';
 font-family: 'NanumSquareRound';
 font-family: 'NanumSquareRoundBold';
@@ -89,6 +96,15 @@ font-family: 'NanumSquareRoundExtraBold'; */
 }
 
 /* push main */
+.push-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   color: #5B5DFF;
   font-family: "SF Pro Rounded";
@@ -96,6 +112,7 @@ h1 {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin: 0;
 }
 h3 {
   color: #5B5DFF;
@@ -104,6 +121,7 @@ h3 {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin: 0;
 }
 
 .pushMain {
@@ -178,10 +196,17 @@ h3 {
 .line-caption {
   background-color: white;
 }
-.flowing-text {
+.flowing-text-container {
+  position: relative;
+  width: 100%; /* 화면 전체를 가득 채움 */
+  overflow: hidden; /* 텍스트가 컨테이너를 벗어나지 않도록 숨김 */
   white-space: nowrap;
-  overflow: hidden;
-  animation: flowText 30s linear infinite;
+}
+
+.flowing-text {
+  display: inline-block;
+  padding-right: 100%; /* 텍스트 뒤에 충분한 공간 추가 */
+  animation: flowText 30s linear infinite; /* 무한 반복 애니메이션 */
   color: #5B5DFF;
   font-family: "SF Pro Rounded";
   font-size: 24px;
@@ -192,9 +217,103 @@ h3 {
 
 @keyframes flowText {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%); /* 처음 시작 */
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* 텍스트가 완전히 왼쪽으로 이동 */
   }
+}
+
+/* 모달 */
+/* 오버레이 스타일 */
+.custom-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* 반투명 검정 배경 */
+  display: flex; /* 중앙 정렬 */
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* 화면 고정 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+/* 콘텐츠 스타일 */
+.custom-modal-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background: white; /* 배경색 */
+  border-radius: 10px; /* 모서리 둥글게 */
+  padding: 3rem 1rem; /* 내부 여백 */
+  width: 400px; /* 고정 너비 */
+  max-width: 90%; /* 반응형 너비 */
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  transform: translateY(0); /* 초기 위치 */
+  animation: slideIn 0.3s ease-in-out; /* 애니메이션 */
+}
+
+.custom-modal-content .msg {
+  font-family: 'NanumSquareRound', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 1.2rem;
+  letter-spacing: -0.8px;
+  color: #3b3b3b;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.modal-btn {
+  background-color: #5B5DFF;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  font-family: 'NanumSquareRound', sans-serif;
+  font-weight: 700; /* Bold */
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-btn:hover {
+  background-color: #8c8eff;
+}
+
+/* 애니메이션 */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* H2 스타일 */
+.modalH2 {
+  font-family: 'NanumSquareRound', sans-serif;
+  font-weight: Bold;
+  font-size: 2rem;
+  letter-spacing: -2px;
+  color: #5B5DFF;
+  margin: 0;
+}
+
+
+/* 텍스트 */
+.box {
+    font-family: 'NanumSquareRound', sans-serif;
+    font-weight: Bold;
+    font-size: 1rem;
+    display: inline-flex;
+    padding: 0.625rem 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 100px;
 }
