@@ -22,11 +22,14 @@ export default function PushBtn() {
         '🌟 쾅쾅쾅! 버튼 터질 때마다 행운 팡팡팡!',
         '💡 누른 순간부터 와르르 쏟아지는 행운',
         '🔑 2025년, 행운의 열쇠는 이미 네 손에 있어!',
+        '💎 2025년, 보석처럼 반짝일 거야',
     ];
 
-    // 버튼 클릭 핸들러
+  // 버튼 클릭 핸들러
     const handleClick = () => {
         play(); // 효과음 재생
+
+        document.body.style.overflow = 'hidden';
 
         const randomMessage =
         randomMessages[Math.floor(Math.random() * randomMessages.length)];
@@ -46,52 +49,40 @@ export default function PushBtn() {
 
         // GSAP Physics2D 애니메이션 적용
         gsap.to(newBox, {
-        physics2D: {
-            velocity: Math.random() * 300 + 200, // 랜덤 속도 (200~500px/s)
-            angle: Math.random() * 360, // 랜덤 각도 (0~360도)
-            gravity: 800, // 중력
-        },
-        duration: 3, // 애니메이션 지속 시간
-        onComplete: () => {
-            newBox.remove(); // 애니메이션 완료 후 박스 제거
-        },
-        });
-    };
+            physics2D: {
+                velocity: Math.random() * 300 + 200, // 랜덤 속도 (200~500px/s)
+                angle: Math.random() * 360, // 랜덤 각도 (0~360도)
+                gravity: 400, // 중력
+            },
+            duration: 3, // 애니메이션 지속 시간
+            onComplete: () => {
+                newBox.remove(); // 애니메이션 완료 후 박스 제거
+            },
+            });
+        };
 
     return (
         <div className="push-main">
-            <div className="line-caption">
-                <div class="flowing-text-container">
-                        <div class="flowing-text">
-                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
-                        </div>
-                        <div class="flowing-text">
-                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
-                        </div>
-                        <div class="flowing-text">
-                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
-                        </div>
-                        <div class="flowing-text">
-                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
-                        </div>
-                        <div class="flowing-text">
-                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
-                        </div>
-                    </div>
+        <div className="line-caption">
+            <div className="flowing-text-container">
+            {/* 단일 텍스트를 반복하지 않고 여러 번 복제 */}
+            {[...Array(5)].map((_, index) => (
+                <div key={index} className="flowing-text">
+                Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
                 </div>
-                <div className="push-title">
-                    <img src="/title-text.svg" alt="" />
-                    {/* <h1>Push!</h1>
-                    <h3>Luck Button</h3> */}
-                </div>
-                {/* 메시지 컨테이너 */}
-                <div ref={containerRef} className="message-container">
+            ))}
             </div>
-            {/* 버튼 클릭 시 사운드 및 메시지 생성 */}
-            <button className="push-button" onClick={handleClick}>
-                <span className="back"></span>
-                <span className="front"></span>
-            </button>
+        </div>
+        <div className="push-title">
+            <img src="/title-text.svg" alt="Title Text" />
+        </div>
+        {/* 메시지 컨테이너 */}
+        <div ref={containerRef} className="message-container"></div>
+        {/* 버튼 클릭 시 사운드 및 메시지 생성 */}
+        <button className="push-button" onClick={handleClick}>
+            <span className="back"></span>
+            <span className="front"></span>
+        </button>
         </div>
     );
 }

@@ -86,6 +86,7 @@
   margin: 5rem;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .push-title img {
@@ -150,6 +151,7 @@
   box-shadow: 0 0;
 }
 
+/* line flow text */
 .line-caption {
   background-color: white;
   padding: 4px 0;
