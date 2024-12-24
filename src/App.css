@@ -1,98 +1,81 @@
-
+* {
+  box-sizing: border-box;
+}
 /* font */
 /* SF rounded */
-/** Ultra Light */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 100;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
-}
+  /** Ultra Light */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+  }
 
-/** Thin */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 200;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
-}
+  /** Thin */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 200;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+  }
 
-/** Regular */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
+  /** Regular */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
 
-/** Medium */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 500;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
-}
+  /** Medium */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 500;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+  }
 
-/** Semi Bold */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 600;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
-}
+  /** Semi Bold */
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 600;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+  }
 
-/** Bold */ 
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 700;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
-}
+  /** Bold */ 
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+  }
 
 
 /* 나눔스퀘어라운드 */
-@font-face {
-  font-family: 'NanumSquareRound';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-/* font-family: 'NanumSquareRoundLight';
-font-family: 'NanumSquareRound';
-font-family: 'NanumSquareRoundBold';
-font-family: 'NanumSquareRoundExtraBold'; */
+  @font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  h1 {
+    color: #5B5DFF;
+    font-family: "SF Pro Rounded";
+    font-size: 6.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+  }
+
+  h3 {
+    color: #5B5DFF;
+    font-family: "SF Pro Rounded";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+  }
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* push main */
@@ -105,35 +88,19 @@ font-family: 'NanumSquareRoundExtraBold'; */
   justify-content: center;
 }
 
-h1 {
-  color: #5B5DFF;
-  font-family: "SF Pro Rounded";
-  font-size: 6.25rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin: 0;
-}
-h3 {
-  color: #5B5DFF;
-  font-family: "SF Pro Rounded";
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin: 0;
+.push-title img {
+  width: 300px;
 }
 
-.pushMain {
+.push-main {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(0deg, #FFF -32.88%, #6692FF 109.42%);
+  background: radial-gradient(144.1% 66.59% at 50% 71.68%, #FFF 0%, #669CFF 100%);
 }
 
-.btn-class-name {
-  --primary: 255, 90, 120;
-  --secondary: 150, 50, 60;
+.push-button {
+  top: 11%;
   width: 120px;
   height: 110px;
   border: none;
@@ -141,13 +108,13 @@ h3 {
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
-  outline: 24px solid  rgba(90, 93, 255, 0.50);
+  outline: 24px solid  #79a6ff99;
   border-radius: 100%;
   position: relative;
   transition: .3s;
 }
 
-.btn-class-name .back {
+.push-button .back {
   background: #2C2E89;
   border-radius: 100%;
   position: absolute;
@@ -157,12 +124,12 @@ h3 {
   height: 100%;
 }
 
-.btn-class-name .front {
-  background:  linear-gradient(0deg, #5a5dff99 20%, #5A5DFF 50%);
-  box-shadow: 0px 48px 96px -19.2px #001C49;
+.push-button .front {
+  border-radius: 17.1875rem;
+  background: linear-gradient(180deg, #2557FF 0%, #8FA9FF 100%);
+  box-shadow: 0px 2px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px 4px 24px 2px rgba(50, 193, 255, 0.45) inset;
   border-radius: 100%;
   position: absolute;
-  /* border: 4px solid #2C2E89; */
   left: 0;
   top: 0;
   width: 100%;
@@ -175,26 +142,17 @@ h3 {
   font-family: inherit;
   transform: translateY(-15%);
   transition: .15s;
-  color: #5a5dff99;
+  color: #2557FF99;
 }
 
-.btn-class-name:active .front {
+.push-button:active .front {
   transform: translateY(0%);
   box-shadow: 0 0;
 }
 
-
-.line-caption > span {
-  font-size: 24px;
-  color: #5B5DFF;
-  font-family: "SF Pro Rounded";
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
 .line-caption {
   background-color: white;
+  padding: 4px 0;
 }
 .flowing-text-container {
   position: relative;
@@ -205,14 +163,16 @@ h3 {
 
 .flowing-text {
   display: inline-block;
-  padding-right: 100%; /* 텍스트 뒤에 충분한 공간 추가 */
-  animation: flowText 30s linear infinite; /* 무한 반복 애니메이션 */
-  color: #5B5DFF;
+  padding-right: 4px; /* 텍스트 뒤에 충분한 공간 추가 */
+  animation: flowText 50s linear infinite; /* 무한 반복 애니메이션 */
+  color: #669CFF;
   font-family: "SF Pro Rounded";
-  font-size: 24px;
+  font-size: 1.125rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
+  text-transform: uppercase;
+  white-space: pre;
 }
 
 @keyframes flowText {
@@ -227,7 +187,7 @@ h3 {
 /* 모달 */
 /* 오버레이 스타일 */
 .custom-modal-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* 반투명 검정 배경 */
+  background-color: #00000066; /* 반투명 검정 배경 */
   display: flex; /* 중앙 정렬 */
   justify-content: center;
   align-items: center;
@@ -250,16 +210,27 @@ h3 {
   border-radius: 10px; /* 모서리 둥글게 */
   padding: 3rem 1rem; /* 내부 여백 */
   width: 400px; /* 고정 너비 */
+  min-width: 24%; /* 반응형 너비 */
   max-width: 90%; /* 반응형 너비 */
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
   transform: translateY(0); /* 초기 위치 */
   animation: slideIn 0.3s ease-in-out; /* 애니메이션 */
 }
 
+/* H2 스타일 */
+.modal-H2 {
+  font-family: 'NanumSquareRound', sans-serif;
+  font-weight: Bold;
+  font-size: 1.5rem;
+  letter-spacing: -2px;
+  color: #5B5DFF;
+  margin: 0;
+}
+
 .custom-modal-content .msg {
   font-family: 'NanumSquareRound', sans-serif;
   font-weight: 700; /* Bold */
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: -0.8px;
   color: #3b3b3b;
   white-space: pre-wrap;
@@ -267,7 +238,7 @@ h3 {
 }
 
 .modal-btn {
-  background-color: #5B5DFF;
+  background-color: #3179ff;
   border: none;
   padding: 1rem 2rem;
   border-radius: 12px;
@@ -276,10 +247,11 @@ h3 {
   font-family: 'NanumSquareRound', sans-serif;
   font-weight: 700; /* Bold */
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .modal-btn:hover {
-  background-color: #8c8eff;
+  background-color: #79a8ff;
 }
 
 /* 애니메이션 */
@@ -294,16 +266,6 @@ h3 {
   }
 }
 
-/* H2 스타일 */
-.modalH2 {
-  font-family: 'NanumSquareRound', sans-serif;
-  font-weight: Bold;
-  font-size: 2rem;
-  letter-spacing: -2px;
-  color: #5B5DFF;
-  margin: 0;
-}
-
 
 /* 텍스트 */
 .box {
@@ -316,4 +278,78 @@ h3 {
     align-items: center;
     background-color: white;
     border-radius: 100px;
+}
+
+/* 눈 */
+*{ margin: 0; padding: 0; }
+.snow_wrap .snow_div {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  color: #fff;
+  font-size: 1rem;
+  text-shadow : 0 0 5px rgba(0, 0, 0, 0.25);
+  animation: snow_shake 3s ease-in-out infinite;  
+  user-select: none;
+}
+.snow_wrap .snow_div p { animation: snow_fall 10s linear infinite; }
+
+.snow_wrap .snow_div:nth-of-type(0) { left: 0%; animation-delay: 0s; }
+.snow_wrap .snow_div:nth-of-type(0) p { animation-delay: 0s; }
+.snow_wrap .snow_div:nth-of-type(1) { left: 10%; animation-delay: 1s; }
+.snow_wrap .snow_div:nth-of-type(1) p { animation-delay: 1s; }
+.snow_wrap .snow_div:nth-of-type(2) { left: 20%; animation-delay: 0.5s; }
+.snow_wrap .snow_div:nth-of-type(2) p { animation-delay: 6s; }
+.snow_wrap .snow_div:nth-of-type(3) { left: 30%; animation-delay: 2s; }
+.snow_wrap .snow_div:nth-of-type(3) p { animation-delay: 4s; }
+.snow_wrap .snow_div:nth-of-type(4) { left: 40%; animation-delay: 2s; }
+.snow_wrap .snow_div:nth-of-type(4) p { animation-delay: 2s; }
+.snow_wrap .snow_div:nth-of-type(5) { left: 50%; animation-delay: 3s; }
+.snow_wrap .snow_div:nth-of-type(5) p { animation-delay: 8s; }
+.snow_wrap .snow_div:nth-of-type(6) { left: 60%; animation-delay: 2s; }
+.snow_wrap .snow_div:nth-of-type(6) p { animation-delay: 6s; }
+.snow_wrap .snow_div:nth-of-type(7) { left: 70%; animation-delay: 1s; }
+.snow_wrap .snow_div:nth-of-type(7) p { animation-delay: 2.5s; }
+.snow_wrap .snow_div:nth-of-type(8) { left: 80%; animation-delay: 0s; }
+.snow_wrap .snow_div:nth-of-type(8) p { animation-delay: 1s; }
+.snow_wrap .snow_div:nth-of-type(9) { left: 90%; animation-delay: 1.5s; }
+.snow_wrap .snow_div:nth-of-type(9) p { animation-delay: 3s; }
+.snow_wrap .snow_div:nth-of-type(10) { left: 25%; animation-delay: 0.5s; }
+.snow_wrap .snow_div:nth-of-type(10) p { animation-delay: 2s; }
+.snow_wrap .snow_div:nth-of-type(11) { left: 65%; animation-delay: 2.5s; }
+.snow_wrap .snow_div:nth-of-type(11) p { animation-delay: 4s; }
+.snow_wrap .snow_div:nth-of-type(12) { left: 85%; animation-delay: 2s; }
+.snow_wrap .snow_div:nth-of-type(12) p { animation-delay: 7.5s; }
+.snow_wrap .snow_div:nth-of-type(13) { left: 5%; animation-delay: 0s; }
+.snow_wrap .snow_div:nth-of-type(13) p { animation-delay: 2.5s; }
+.snow_wrap .snow_div:nth-of-type(14) { left: 45%; animation-delay: 1.5s; }
+.snow_wrap .snow_div:nth-of-type(14) p { animation-delay: 3.5s; }
+.snow_wrap .snow_div:nth-of-type(15) { left: 75%; animation-delay: 1s; }
+.snow_wrap .snow_div:nth-of-type(15) p { animation-delay: 2s; }
+.snow_wrap .snow_div:nth-of-type(16) { left: 35%; animation-delay: 2.5s; }
+.snow_wrap .snow_div:nth-of-type(16) p { animation-delay: 4.5s; }
+.snow_wrap .snow_div:nth-of-type(17) { left: 15%; animation-delay: 1s; }
+.snow_wrap .snow_div:nth-of-type(17) p { animation-delay: 3s; }
+.snow_wrap .snow_div:nth-of-type(18) { left: 95%; animation-delay: 0s; }
+.snow_wrap .snow_div:nth-of-type(18) p { animation-delay: 2s; }
+
+@keyframes snow_shake {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes snow_fall {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
 }

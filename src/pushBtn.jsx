@@ -39,7 +39,7 @@ export default function PushBtn() {
         newBox.className = 'box';
         newBox.textContent = randomMessage;
         newBox.style.position = 'absolute';
-        newBox.style.top = '50%';
+        newBox.style.top = '55%';
         newBox.style.left = '50%';
         newBox.style.transform = 'translate(-50%, -50%)';
         containerRef.current.appendChild(newBox);
@@ -59,28 +59,39 @@ export default function PushBtn() {
     };
 
     return (
-        <div className="pushMain">
-        <div className="line-caption">
-        <div class="flowing-text-container">
-                <div class="flowing-text">
-                    💙Push the Luck Button and make a Wish💙 Push the Luck Button and make a wish💙 Push the Luck Button and make a wish💙
+        <div className="push-main">
+            <div className="line-caption">
+                <div class="flowing-text-container">
+                        <div class="flowing-text">
+                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
+                        </div>
+                        <div class="flowing-text">
+                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
+                        </div>
+                        <div class="flowing-text">
+                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
+                        </div>
+                        <div class="flowing-text">
+                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
+                        </div>
+                        <div class="flowing-text">
+                            Push the Luck Button and make a Wish! Push the Luck Button and make a wish! Push the Luck Button and make a wish!
+                        </div>
+                    </div>
                 </div>
-                <div class="flowing-text">
-                    💙Push the Luck Button and make a Wish💙 Push the Luck Button and make a wish💙 Push the Luck Button and make a wish💙
+                <div className="push-title">
+                    <img src="/title-text.svg" alt="" />
+                    {/* <h1>Push!</h1>
+                    <h3>Luck Button</h3> */}
                 </div>
+                {/* 메시지 컨테이너 */}
+                <div ref={containerRef} className="message-container">
             </div>
-        </div>
-        <div className="push-title">
-            <h1>Push!</h1>
-            <h3>Luck Button</h3>
-        </div>
-        {/* 메시지 컨테이너 */}
-        <div ref={containerRef} className="message-container"></div>
-        {/* 버튼 클릭 시 사운드 및 메시지 생성 */}
-        <button className="btn-class-name" onClick={handleClick}>
-            <span className="back"></span>
-            <span className="front"></span>
-        </button>
+            {/* 버튼 클릭 시 사운드 및 메시지 생성 */}
+            <button className="push-button" onClick={handleClick}>
+                <span className="back"></span>
+                <span className="front"></span>
+            </button>
         </div>
     );
 }

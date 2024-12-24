@@ -14,7 +14,7 @@ export default function CustomModal() {
         overlayClassName="custom-modal-overlay" // 오버레이 스타일
         className="custom-modal-content" // 콘텐츠 스타일
         >
-            <p className="modalH2">행운 버튼을 눌러줘!</p>
+            <p className="modal-H2">행운 버튼을 눌러줘!</p>
             <div className='msg'>
                 🌟 2025년 행운대박 버튼!🌟<br /><br />
                 버튼 하나로 올해의 행운을 가져가볼까?<br />
