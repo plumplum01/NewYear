@@ -8,9 +8,9 @@ import { Physics2DPlugin } from './plugins/Physics2DPlugin'; // 플러그인 경
 gsap.registerPlugin(Physics2DPlugin);
 
 export default function PushBtn() {
-  const [play] = useSound('/coin.wav'); // 효과음 설정
-  const containerRef = useRef(null); // 메시지 컨테이너 참조
-  const [messageCount, setMessageCount] = useState(0); // 고유 ID 관리
+    const [play] = useSound(`${process.env.PUBLIC_URL}/coin.wav`); // 동적 경로 설정
+    const containerRef = useRef(null); // 메시지 컨테이너 참조
+    const [messageCount, setMessageCount] = useState(0); // 고유 ID 관리
 
   // 랜덤 메시지 배열
     const randomMessages = [
