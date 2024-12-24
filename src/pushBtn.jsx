@@ -3,6 +3,7 @@ import useSound from 'use-sound';
 import gsap from 'gsap';
 import { Physics2DPlugin } from './plugins/Physics2DPlugin'; // 플러그인 경로를 프로젝트에 맞게 설정
 
+
 // GSAP Physics2D 플러그인 등록
 gsap.registerPlugin(Physics2DPlugin);
 
@@ -74,8 +75,8 @@ export default function PushBtn() {
             </div>
         </div>
         <div className="push-title">
-            <img src="/title-text.svg" alt="Title Text" />
-        </div>
+            <img src={`${process.env.PUBLIC_URL}/title-text.svg`} alt="Title Text" />
+        </div>  
         {/* 메시지 컨테이너 */}
         <div ref={containerRef} className="message-container"></div>
         {/* 버튼 클릭 시 사운드 및 메시지 생성 */}
