@@ -43,7 +43,7 @@ export default function PushBtn() {
         newBox.className = 'box';
         newBox.textContent = randomMessage;
         newBox.style.position = 'absolute';
-        newBox.style.top = '55%';
+        newBox.style.top = '50%';
         newBox.style.left = '50%';
         newBox.style.transform = 'translate(-50%, -50%)';
         containerRef.current.appendChild(newBox);
